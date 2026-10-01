@@ -1,52 +1,59 @@
- Paper P01 — Design and Analysis of Approximate Compressors for Multiplication
+# Paper P01 — Design and Analysis of Approximate Compressors for Multiplication
 
-Pre Infromation-
+## Publication Information
 
-Title: Design and Analysis of Approximate Compressors for Multiplication
+- **Title:** Design and Analysis of Approximate Compressors for Multiplication
+- **Authors:** Amir Momeni, Jie Han, Paolo Montuschi, Fabrizio Lombardi
+- **Year:** 2015
+- **Journal:** IEEE Transactions on Computers
+- **Volume:** 64
+- **Issue:** 4
+- **Pages:** 984–994
+- **DOI:** 10.1109/TC.2014.2308214
+- **Publisher:** IEEE
+- **Paper Link:** https://doi.org/10.1109/TC.2014.2308214
 
-Authors: Amir Momeni, Jie Han, Paolo Montuschi, Fabrizio Lombardi
+---
 
-Year: 2015
+## Abstract
 
-Journal: IEEE Transactions on Computers
+This paper presents an analysis and design of two new approximate 4–2 compressors in multipliers. The proposed designs depend on several characteristics and features of the compressor architecture.
 
-Volume: 64
+Approximate computing provides advantages in terms of transistor count, delay, power consumption, and overall performance, while the tradeoff is evaluated using error rate and normalized error distance.
 
-Issue: 4
+A 4–2 compressor is a small arithmetic circuit used inside fast binary multipliers to reduce the number of partial product bits. The paper includes simulations and demonstrates approximate multiplication for image processing applications.
 
-Pages: 984–994
+The authors show that the newly designed approximate 4–2 compressors provide reductions in power dissipation, delay, and transistor count. In addition, the resulting multipliers show improved ANED (Average Normalized Error Distance) and SNR (Signal-to-Noise Ratio).
 
-DOI: 10.1109/TC.2014.2308214
+---
 
-Publisher: IEEE
+## All About 4–2 Compressors
 
-Paper Link: https://doi.org/10.1109/TC.2014.2308214
+These are small arithmetic circuits used in fast binary multiplication to reduce the number of partial products.
 
+### 4–2 Compressor
 
+A 4–2 compressor has four input bits and two output bits, usually represented as:
 
-#Abstarct:
+- Inputs: `X₁, X₂, X₃, X₄, Cᵢₙ`
+- Outputs: `Sum, Carry, Cₒᵤₜ`
 
-This paper is actually an analysis and design of two new approximate 4–2 compressors in multipliers.
-Whereas the new designs depend on various factors and features of the compressor.
+---
 
-As approximate computation benefits in terms of design, such as the number of transistors, delay, power consumption, and even performance, while measured through error rate and normalized error distance.
+## Introduction – Main Concept
 
-#4–2 compressor is a small arithmetic circuit used inside fast binary multipliers to reduce the number of partial product bits.
-As a result, some simulations are documented, and approximate computing multiplication for image processing is shown.
-As the authors presented the outcomes of the newly designed approximate 4–2 compressors, which show some positive results in the reduction of power dissipation, delay, and transistor count compared to exact designs.
+In this paper, two new approximate 4–2 compressors are proposed and analyzed. The aim is to determine which compressor design provides better delay and power consumption than the exact 4–2 compressor.
 
-As technical results, the two new designs of multipliers provide improved ANED (Average Normalized Error Distance) and Signal-to-Noise Ratio (SNR).
+The work also compares their performance in terms of accuracy and hardware efficiency.
 
-All About 4–2 Compressors
-These are small arithmetic circuits, each of which is used for fast binary multiplication to reduce the number of partial products.
-4–2 Compressor
-A 4–2 compressor has 4 input bits and 2 output bits, usually:
-X₁, X₂, X₃, X₄ and Cᵢₙ — inputs
-Sum, Carry, Cₒᵤₜ — outputs
+---
 
-#Introduction – Main Concept
-In this paper, two new approximate 4–2 compressors are proposed and analyzed. The aim is to determine which of these compressors has better delay and power consumption than the exact 4–2 compressor.
+## Part A – Exact Compressor
 
-Part A – Exact Compressor
+This section discusses the exact 4–2 compressor structure and its operation.
 
+---
 
+## Summary
+
+This study highlights the tradeoff between accuracy and efficiency in approximate arithmetic circuits. The proposed approximate compressors are useful in multiplier design where minor computational errors are acceptable in exchange for reduced hardware cost and faster operation.
