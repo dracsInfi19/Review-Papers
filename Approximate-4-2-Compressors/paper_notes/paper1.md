@@ -32,6 +32,7 @@ The authors show that the newly designed approximate 4–2 compressors provide r
 These are small arithmetic circuits used in fast binary multiplication to reduce the number of partial products.
 
 ### 4–2 Compressor
+(fig3)
 
 A 4–2 compressor has four input bits and two output bits, usually represented as:
 
@@ -51,9 +52,31 @@ The work also compares their performance in terms of accuracy and hardware effic
 ## Part A – Exact Compressor
 
 This section discusses the exact 4–2 compressor structure and its operation.
+The common implementation of 4-2 compressor is usually made of two full adder cell. where as different designs using same constraints are proposed for 4-2 compressor 
+fig(4) shows an example of exact 4-2 compressor made up of XOR and XNOR gates .
+as the design consists of 3 XOR and XNOR gates, 1 individual XOR and 2 2-1 MUX .
+Because of these constraints the net delay in overall circuit is 3(del).,where as (del) represents the unit delay measure through gates in the circuit design. 
+Following equations gives output of 4-2 compressor.
+
+Sum = x_1 \oplus x_2 \oplus x_3 \oplus x_4 \oplus C_{in}
+
+C_{out} = (x_1 \oplus x_2)x_3 + (x_1 \oplus x_2)x_1
+
+Carry = (x_1 \oplus x_2 \oplus x_3 \oplus x_4)C_{in} + (x_1 \oplus x_2 \oplus x_3 \oplus x_4)x_4
+
 
 ---
 
+## Part B - Approximate Compressor
+# Design 1
+By comparing the output table of exact 4-2 compressor in (fig1t1) you find carry output and Cin in many i/o are majorly same, 25 out of 32 states are same. this clearly shows that in 75% of states both carry and Cin are same. so this can be the key point in approximate design.
+
+Here, the author made a quite manupilation in the other unmatched states. so author changed equation to [Carry′=Cin]. this changes we can observe in output of design1 approximate 4-2 compressor in (fig2t2)
+
+
+
+
+
 ## Summary
 
-This study highlights the tradeoff between accuracy and efficiency in approximate arithmetic circuits. The proposed approximate compressors are useful in multiplier design where minor computational errors are acceptable in exchange for reduced hardware cost and faster operation.
+This study highlights the tradeoff between accuracy and efficiency in approximate arithmetic circuits. The proposed approximate compressors are useful in multiplier design where minor computational controlled errors are acceptable in exchange for reduced hardware cost and faster operation.
