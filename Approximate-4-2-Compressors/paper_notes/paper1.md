@@ -67,8 +67,7 @@ C_{out} = (x_1 \oplus x_2)x_3 + (x_1 \oplus x_2)x_1
 $$
 
 $$
-Carry = (x_1 \oplus x_2 \oplus x_3 \oplus x_4)C_{in}
-+ (x_1 \oplus x_2 \oplus x_3 \oplus x_4)x_4
+Carry = (x_1 \oplus x_2 \oplus x_3 \oplus x_4)C_{in} + (x_1 \oplus x_2 \oplus x_3 \oplus x_4)x_4
 $$
 
 
