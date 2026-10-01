@@ -58,11 +58,18 @@ as the design consists of 3 XOR and XNOR gates, 1 individual XOR and 2 2-1 MUX .
 Because of these constraints the net delay in overall circuit is 3(del).,where as (del) represents the unit delay measure through gates in the circuit design. 
 Following equations gives output of 4-2 compressor.
 
+$$
 Sum = x_1 \oplus x_2 \oplus x_3 \oplus x_4 \oplus C_{in}
+$$
 
+$$
 C_{out} = (x_1 \oplus x_2)x_3 + (x_1 \oplus x_2)x_1
+$$
 
-Carry = (x_1 \oplus x_2 \oplus x_3 \oplus x_4)C_{in} + (x_1 \oplus x_2 \oplus x_3 \oplus x_4)x_4
+$$
+Carry = (x_1 \oplus x_2 \oplus x_3 \oplus x_4)C_{in}
++ (x_1 \oplus x_2 \oplus x_3 \oplus x_4)x_4
+$$
 
 
 ---
